@@ -1,0 +1,13 @@
+@extends('layouts.frontlayouts')
+@section('title', 'Uyushma')
+@section('content')
+    @include('front.section.slider')
+    @include('front.section.service')
+    @include('front.section.about')
+    @include('front.section.project')
+    @include('front.section.member')
+    @include('front.section.count')
+    @include('front.section.team')
+    @include('front.section.testimonial')
+    @include('front.section.news')
+@endsection

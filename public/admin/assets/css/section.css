@@ -1,0 +1,110 @@
+.icon-lg {
+    width: 60px;
+    height: 60px;
+}
+.text-violet {
+    color: #8b5cf6;
+}
+.text-green {
+    color: #3dc9b3;
+}
+.text-fuchsia {
+    color: #c026d3;
+}
+.text-blue {
+    color: #3b82f6;
+}
+.text-amber {
+    color: #fbbf24;
+}
+.text-red {
+    color: #F05340;
+}
+
+#popup-timer {
+    position: fixed;
+    top: 12%;
+    right: 30px;
+    z-index: 9999;
+    background: #6777ef;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+
+    #popup-timer {
+        top: 10%;
+        right: 10px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .course-name{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+
+    .wizard>.steps a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-size: 12px;
+    }
+
+    .model-card {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .desktop-only {
+        display: block;
+    }
+    .mobile-only {
+        display: none;
+    }
+    iframe, embed {
+        width: 100%;
+        height: 500px;
+    }
+    video {
+        width: 100%;
+    }
+}
+
+.media-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.activity-detail .modul-names {
+    display: flex;
+    flex-direction: column;
+}
+
+.modul-names span {
+    margin: 0.5em 0;
+}
