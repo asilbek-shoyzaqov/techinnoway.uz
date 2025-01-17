@@ -72,7 +72,7 @@
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                                 |&nbsp;
                                 “Arxitektura-qurilish” uyushmasi. By <a
-                                    href="#" target="_blank">Asilbek</a>
+                                    href="https://t.me/asilbekshoyzaqov" target="_blank">Asilbek Shoyzaqov</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
