@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Comment;
 use App\Models\Menu;
 use App\Models\Submenu;
 use App\Models\Word;
@@ -24,11 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('*', function ($view) {
-            $unreadComments = Comment::where('read', false)->latest()->take(5)->get();
-            $view->with('unreadComments', $unreadComments);
-        });
-
         View::composer ( '*', function ($view) {
             // Word va Menu ma'lumotlarini yuklash
             $topWord1 = Word::find ( 1 );
