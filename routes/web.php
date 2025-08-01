@@ -24,7 +24,7 @@ Route::get('lang/{lang}', function ($lang) {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.index');
 })->name('index');
 
 
