@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Admin - @yield('title')</title>
+    <title>Salom - @yield('title')</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/app.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/bundles/summernote/summernote-bs4.css') }}">
