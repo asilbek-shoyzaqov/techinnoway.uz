@@ -17,7 +17,6 @@ use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\DocumentController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('lang/{lang}', function ($lang) {
     session(['lang' => $lang]);
     return back();
@@ -25,7 +24,31 @@ Route::get('lang/{lang}', function ($lang) {
 
 Route::get('/', function () {
     return view('front.index');
-})->name('index');
+});
+
+Route::get('about', function () {
+    return view('front.about');
+});
+
+Route::get('services', function () {
+    return view('front.services');
+});
+
+Route::get('projects', function () {
+    return view('front.project');
+});
+
+Route::get('team', function () {
+    return view('front.team');
+});
+
+Route::get('news', function () {
+    return view('front.post');
+});
+
+Route::get('contact', function () {
+    return view('front.contact');
+});
 
 
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function(){

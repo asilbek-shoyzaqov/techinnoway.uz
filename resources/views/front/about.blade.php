@@ -1,8 +1,8 @@
 @extends('layouts.frontlayouts')
-@section('title', 'Home')
+@section('title', 'About')
 @section('content')
     <!-- Main Content -->
     <div class="main-content">
-        @include('front.section.hero')
+        @include('front.section.about')
     </div>
 @endsection
