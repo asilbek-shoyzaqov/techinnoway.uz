@@ -15,6 +15,7 @@ use App\Http\Controllers\admin\FileController;
 use App\Http\Controllers\admin\WordController;
 use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\DocumentController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{lang}', function ($lang) {
@@ -82,8 +83,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
+Route::get('/{slug}', [FrontController::class, 'page'])->name('front.slug');
 
 
 require __DIR__.'/auth.php';

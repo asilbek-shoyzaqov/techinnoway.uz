@@ -45,13 +45,19 @@
 
         <a href="/" class="logo d-flex align-items-center me-auto">
             <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="front/assets/img/logo.png" alt="">
+            {{--<img src="front/assets/img/logo.png" alt="">--}}
             <h1 class="sitename">TechInnoWay</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="/" class="active">Home<br></a></li>
+                @foreach($menus as $menu)
+                    <li>
+                        <a href="{{ count($menu->submenus) ? 'javascript:void(0);' : route('front.slug', $menu->slug) }}">
+                            {{ $menu->{'name_'.app()->getLocale()} }}</a>
+                    </li>
+                @endforeach
+                <li><a href="/">Home<br></a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
                 <li><a href="/projects">Projects</a></li>
@@ -62,7 +68,8 @@
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <select id="languageSelect" class="btn-getstarted flex-md-shrink-0 form-select w-auto ms-4" aria-label="Select Language"
+        <select id="languageSelect" class="btn-getstarted flex-md-shrink-0 form-select w-auto ms-4"
+                aria-label="Select Language"
                 onchange="changeLanguage(this)">
             <option value="uz" {{ App::getLocale() === 'uz' ? 'selected' : '' }}>Ўзбек</option>
             <option value="ru" {{ App::getLocale() === 'ru' ? 'selected' : '' }}>Русский</option>
@@ -101,8 +108,8 @@
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="d-flex align-items-center">
-                    <span class="sitename">FlexStart</span>
+                <a href="/" class="d-flex align-items-center">
+                    <span class="sitename">TechInnoWay</span>
                 </a>
                 <div class="footer-contact pt-3">
                     <p>A108 Adam Street</p>
