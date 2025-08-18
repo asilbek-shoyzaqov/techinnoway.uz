@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/components.css') }}">
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/custom.css') }}">
-    <link rel='shortcut icon' type='image/x-icon' href='/front/img/SIRDARYOLOGO.svg' />
+    <link rel='shortcut icon' type='image/x-icon' href='#' />
     @yield('css')
 </head>
 

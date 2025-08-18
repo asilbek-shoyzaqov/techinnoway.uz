@@ -24,33 +24,8 @@ Route::get('lang/{lang}', function ($lang) {
 });
 
 Route::get('/', function () {
-    return view('front.index');
+    return view('front.menus.index');
 });
-
-Route::get('about', function () {
-    return view('front.about');
-});
-
-Route::get('services', function () {
-    return view('front.services');
-});
-
-Route::get('projects', function () {
-    return view('front.project');
-});
-
-Route::get('team', function () {
-    return view('front.team');
-});
-
-Route::get('news', function () {
-    return view('front.post');
-});
-
-Route::get('contact', function () {
-    return view('front.contact');
-});
-
 
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function(){
     Route::get('/dashboard', function () {
@@ -81,6 +56,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Admin login va autentifikatsiya yo'nalishlari
+Route::middleware('guest')->group(function () {
+    Route::get('admin-login', [AuthenticatedSessionController::class, 'create'])->name('admin.login');
+    Route::post('admin-login', [AuthenticatedSessionController::class, 'store']);
 });
 
 Route::get('/{slug}', [FrontController::class, 'page'])->name('front.slug');

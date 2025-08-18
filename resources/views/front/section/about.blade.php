@@ -3,7 +3,7 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
+        <h2>{{ $item->{'name_'.app()->getLocale()} }}</h2>
         <p>Our about<br></p>
     </div><!-- End Section Title -->
 
