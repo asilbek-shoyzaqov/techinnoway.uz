@@ -52,10 +52,12 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 @foreach($menus as $menu)
+                    @foreach($menu->submenus as $submenu)
                     <li>
-                        <a href="{{ count($menu->submenus) ? 'javascript:void(0);' : route('front.slug', $menu->slug) }}">
+                        <a href="{{ route('front.slug', $submenu->slug) }}">
                             {{ $menu->{'name_'.app()->getLocale()} }}</a>
                     </li>
+                    @endforeach
                 @endforeach
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

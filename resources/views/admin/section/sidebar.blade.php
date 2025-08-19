@@ -70,13 +70,6 @@
                     <li><a class="nav-link" href="{{ route ('admin.documents.index') }}">Barcha Hujjatlar</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>Uyushma a'zolari</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route ('admin.members.create') }}">A'zolar qo'shmoq</a></li>
-                    <li><a class="nav-link" href="{{ route ('admin.members.index') }}">Barcha a'zolar</a></li>
-                </ul>
-            </li>
             @endrole
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i

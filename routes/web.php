@@ -13,7 +13,6 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\PostController;
 use App\Http\Controllers\admin\FileController;
 use App\Http\Controllers\admin\WordController;
-use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\DocumentController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +23,7 @@ Route::get('lang/{lang}', function ($lang) {
 });
 
 Route::get('/', function () {
-    return view('front.menus.index');
+    return view('front.submenus.index');
 });
 
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function(){
@@ -47,7 +46,6 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function(){
         Route::resource('categories', CategoryController::class);
         Route::resource('words', WordController::class);
         Route::resource('documents', DocumentController::class);
-        Route::resource('members', MemberController::class);
     });
 });
 

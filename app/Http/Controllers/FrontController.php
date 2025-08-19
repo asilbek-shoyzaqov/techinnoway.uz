@@ -14,12 +14,12 @@ class FrontController extends Controller
         $menus = Menu::with ( 'submenus' )->get ();
         $posts = Post::where('status',1)->with ( 'files' )->limit ( 2)->orderBy ( 'created_at', 'desc' )->get ();
         $manages = Manage::limit(3)->orderBy ( 'created_at', 'asc' )->get ();
-        return view ( 'front.index', compact ( 'menus', 'posts', 'manages' ) );
+        return view ( 'front.menus.index', compact ( 'menus', 'posts', 'manages' ) );
     }
 
     public function page($slug)
     {
-        $menu = Menu::where ( 'slug', $slug )->first ();
+        $menu = Menu::where('slug', $slug)->with('submenus')->first();
         $submenu = Submenu::where ( 'slug', $slug )->with ( 'services' )->first ();
         $post = Post::where ( 'slug', $slug )->first ();
         $posts = Post::where('status',1)->orderBy ( 'created_at', 'desc' )->paginate ( 9 );

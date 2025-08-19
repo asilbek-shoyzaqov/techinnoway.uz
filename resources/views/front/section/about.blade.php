@@ -3,8 +3,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>{{ $item->{'name_'.app()->getLocale()} }}</h2>
-        <p>Our about<br></p>
+        <h2>{{ $item->menu->{'name_'.app()->getLocale()} }}</h2>
+        <p>{{ $item->{'name_'.app()->getLocale()} }}</p>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up">
@@ -12,22 +12,13 @@
 
             <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="content">
-                    <h3>Who We Are</h3>
-                    <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
-                    <p>
-                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-                    </p>
-                    <div class="text-center text-lg-start">
-                        <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Read More</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+                    <h2>{{ optional($item->services->first())->{'name_'.app()->getLocale()} }}</h2>
+                    <p>{{ optional($item->services->first())->{'body_'.app()->getLocale()} }}</p>
                 </div>
             </div>
 
             <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                <img src="/front/assets/img/about.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('storage/' . optional($item->services->first())->image) }}" class="img-fluid" alt="">
             </div>
 
         </div>
@@ -35,22 +26,13 @@
         <div class="row gx-0">
 
             <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                <img src="/front/assets/img/about.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('storage/' . optional($item->services->skip(1)->first())->image) }}" class="img-fluid" alt="">
             </div>
 
             <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="content">
-                    <h3>Who We Are</h3>
-                    <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
-                    <p>
-                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-                    </p>
-                    <div class="text-center text-lg-start">
-                        <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Read More</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+                    <h2>{{ optional($item->services->skip(1)->first())->{'name_'.app()->getLocale()} }}</h2>
+                    <p>{{ optional($item->services->skip(1)->first())->{'body_'.app()->getLocale()} }}</p>
                 </div>
             </div>
 
