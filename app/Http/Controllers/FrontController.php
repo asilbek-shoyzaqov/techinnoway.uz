@@ -14,7 +14,7 @@ class FrontController extends Controller
         $menus = Menu::with ( 'submenus' )->get ();
         $posts = Post::where('status',1)->with ( 'files' )->limit ( 2)->orderBy ( 'created_at', 'desc' )->get ();
         $manages = Manage::limit(3)->orderBy ( 'created_at', 'asc' )->get ();
-        return view ( 'front.menus.index', compact ( 'menus', 'posts', 'manages' ) );
+        return view ( 'front.submenus.index', compact ( 'menus', 'posts', 'manages' ) );
     }
 
     public function page($slug)
@@ -32,9 +32,9 @@ class FrontController extends Controller
 
         if ($menu) {
             // Menu uchun ko'rinishni dinamik tarzda yuklash
-            return view ( 'front.menus.' . $menu->view_template, ['item' => $menu, 'posts' => $posts, 'manages' => $manages] );
+            return view ( 'front.menus.' . $menu->view_template, ['item' => $menu] );
         } elseif ($submenu) {
-            return view ( 'front.submenus.' . $submenu->view_template, ['item' => $submenu, 'manages' => $manages] );
+            return view ( 'front.submenus.' . $submenu->view_template, ['item' => $submenu, 'manages' => $manages, 'posts' => $posts,] );
         } elseif ($post) {
             return view ( 'front.posts.default', ['item' => $post] );
         } else {

@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                <img src="/front/assets/img/hero-img1.png" class="img-fluid animated hero-img" alt="">
+                <img src="/front/assets/img/hero-img2.png" class="img-fluid animated hero-img" alt="">
             </div>
         </div>
     </div>

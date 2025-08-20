@@ -3,8 +3,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Contact Us</p>
+        <h2>{{ $item->menu->{'name_'.app()->getLocale()} }}</h2>
+        <p>{{ $item->{'name_'.app()->getLocale()} }}</p>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -17,36 +17,32 @@
                     <div class="col-md-6">
                         <div class="info-item" data-aos="fade" data-aos-delay="200">
                             <i class="bi bi-geo-alt"></i>
-                            <h3>Address</h3>
-                            <p>A108 Adam Street</p>
-                            <p>New York, NY 535022</p>
+                            <h3>{{ $topWord4['name_'.\App::getLocale('lang')] }}</h3>
+                            <p>{!! $topWord4['text_'.\App::getLocale('lang')] !!}</p>
                         </div>
                     </div><!-- End Info Item -->
 
                     <div class="col-md-6">
                         <div class="info-item" data-aos="fade" data-aos-delay="300">
                             <i class="bi bi-telephone"></i>
-                            <h3>Call Us</h3>
-                            <p>+1 5589 55488 55</p>
-                            <p>+1 6678 254445 41</p>
+                            <h3>{{ $topWord5['name_'.\App::getLocale('lang')] }}</h3>
+                            <p>{!! $topWord5['text_'.\App::getLocale('lang')] !!}</p>
                         </div>
                     </div><!-- End Info Item -->
 
                     <div class="col-md-6">
                         <div class="info-item" data-aos="fade" data-aos-delay="400">
                             <i class="bi bi-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>info@example.com</p>
-                            <p>contact@example.com</p>
+                            <h3>{{ $topWord6['name_'.\App::getLocale('lang')] }}</h3>
+                            <p>{!! $topWord6['text_'.\App::getLocale('lang')] !!}</p>
                         </div>
                     </div><!-- End Info Item -->
 
                     <div class="col-md-6">
                         <div class="info-item" data-aos="fade" data-aos-delay="500">
                             <i class="bi bi-clock"></i>
-                            <h3>Open Hours</h3>
-                            <p>Monday - Friday</p>
-                            <p>9:00AM - 05:00PM</p>
+                            <h3>{{ $topWord7['name_'.\App::getLocale('lang')] }}</h3>
+                            <p>{!! $topWord7['text_'.\App::getLocale('lang')] !!}</p>
                         </div>
                     </div><!-- End Info Item -->
 

@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
             $topWord4 = Word::find(4);
             $topWord5 = Word::find(5);
             $topWord6 = Word::find(6);
-//            $topWord7 = Word::find(7);
+            $topWord7 = Word::find(7);
 //            $topWord8 = Word::find(8);
 //            $topWord9 = Word::find(9);
 //            $topWord10 = Word::find(10);
@@ -55,7 +55,7 @@ class AppServiceProvider extends ServiceProvider
                 'topWord4' => $topWord4,
                 'topWord5' => $topWord5,
                 'topWord6' => $topWord6,
-//                'topWord7' => $topWord7,
+                'topWord7' => $topWord7,
 //                'topWord8' => $topWord8,
 //                'topWord9' => $topWord9,
 //                'topWord10' => $topWord10,
