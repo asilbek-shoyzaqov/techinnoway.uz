@@ -15,6 +15,12 @@
                             <p>{!! $item->{'body_'.app()->getLocale()} !!}</p>
                         </div><!-- End post content -->
 
+                        <div class="meta-bottom">
+                            <ul class="cats">
+                                <li><a href="#">{{ $item->{'meta_title'} }}</a></li>
+                            </ul>
+                        </div><!-- End meta bottom -->
+
                     </article>
 
                 </div>
