@@ -66,7 +66,7 @@
         <select id="languageSelect" class="btn-getstarted flex-md-shrink-0 form-select w-auto ms-4"
                 aria-label="Select Language"
                 onchange="changeLanguage(this)">
-            <option value="uz" {{ App::getLocale() === 'uz' ? 'selected' : '' }}>O‘zbek</option>
+            <option value="uz" {{ App::getLocale() === 'uz' ? 'selected' : '' }}>Ўзбек</option>
             <option value="ru" {{ App::getLocale() === 'ru' ? 'selected' : '' }}>Русский</option>
             <option value="en" {{ App::getLocale() === 'en' ? 'selected' : '' }}>English</option>
         </select>
